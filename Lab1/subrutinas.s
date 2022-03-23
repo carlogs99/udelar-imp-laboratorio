@@ -2,8 +2,6 @@
  
 
 
-.text 
-
 .data
 tab_h7s:
 ; _gfedcba
@@ -24,6 +22,7 @@ tab_h7s:
  db 10000110B ; E
  db 10001110B ; F
 
+.text
 hexa7seg:
  push hl
  ld hl, tab_h7s
@@ -32,8 +31,5 @@ hexa7seg:
  ld a, (hl)
  pop hl
  ret 
- 
-
-
  
 .end
