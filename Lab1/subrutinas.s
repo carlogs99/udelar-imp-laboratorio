@@ -3,6 +3,7 @@ HEX1 equ 0x81
 HEX2 equ 0x82
 HEX3 equ 0x83
 SW equ 0x80
+BTN equ 0x81
 
 .data
 tab_h7s:	  	 ; _gfedcba 
@@ -69,10 +70,10 @@ despreloj:
 	call pbcda7seg
 	ld a, b
 	out (HEX3), a
-	ld a, C
+	ld a, c
 	ld e, a
 	out (HEX2), a
-	INC ix
+	inc ix
 	ld a, (ix)
 	call binapbcd
 	call pbcda7seg
@@ -80,7 +81,7 @@ despreloj:
 	out (HEX1), a
 	ld a, c
 	out (HEX0), a
-	INC ix
+	inc ix
 	ld a, (ix)
 	cp 0d
 	jp nz, fin_despreloj
@@ -88,6 +89,37 @@ despreloj:
 	and 01111111B
 	out (HEX2), a
 	fin_despreloj: 
-		ret
+	dec ix
+	dec ix
+	ret
 	
+decreloj:
+	ld b,(ix)
+	ld a,(ix+1)
+	cp 10d
+	jp m, cent_neg
+	sub 10d
+	ld (ix+1), a
+	jp fin_decreloj
+	cent_neg: 
+		ld c,(ix+1)
+		ld a,b
+		cp 1d
+		jp m , seg_neg
+		sub 1d
+		ld (ix), a
+		ld a, c
+		add a, 90d
+		ld (ix+1), a
+		ld a, (ix+2)
+		cpl
+		ld (ix+2), a
+		jp fin_decreloj
+	seg_neg:
+		ld (ix), 0d
+		ld (ix+1), 0d
+	fin_decreloj:
+	ret
+
+
 .end

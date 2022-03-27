@@ -1,11 +1,11 @@
 
 .text
 
+ld sp, 0x0000
+
 loop_test:
 	call despreloj
-	dec ix
-	dec ix
-break_test:
+	break_test:
 	jr loop_test
 
 .include "subrutinas.s"
