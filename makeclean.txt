@@ -1,2 +1,2 @@
-git rm \* ':!*.s'^C
+git rm \* ':!*.s'^C --dry-run
 
