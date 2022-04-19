@@ -6,6 +6,15 @@ btn_2_mask equ 00000100B
 
 ld sp, 0x0000
 
+ld ix, reloj
+ld a, 99d
+ld (ix), a
+ld a, 23d
+ld (ix+1), a
+ld a, 0x00
+ld (ix+2), a
+call despreloj
+
 btn_2_loop:
 	in a, (BTN)
 	and btn_2_mask

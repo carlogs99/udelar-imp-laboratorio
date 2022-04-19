@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="demo-hw">
+		<CBX_INST_ENTRY INSTANCE_NAME="|sistema_top|mi_pll_divisor:inst6|altpll:altpll_component" CBX_FILE_NAME="mi_pll_divisor_altpll.v"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|sistema_top|sistema:inst4|ROM:inst2|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_hmb1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|sistema_top|sistema:inst4|bridged_jtag_uart:inst7|jtag_uart_0:the_jtag_uart_0|jtag_uart_0_scfifo_r:the_jtag_uart_0_scfifo_r|scfifo:rfifo" CBX_FILE_NAME="scfifo_aq21.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|sistema_top|sistema:inst4|SSRAM:inst1|altsyncram:RAM_rtl_0" CBX_FILE_NAME="altsyncram_hh41.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|sistema_top|sistema:inst4|bridged_jtag_uart:inst7|jtag_uart_0:the_jtag_uart_0|jtag_uart_0_scfifo_w:the_jtag_uart_0_scfifo_w|scfifo:wfifo" CBX_FILE_NAME="scfifo_aq21.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|sistema_top|sistema:inst4|lpm_constant0:inst21|lpm_constant:LPM_CONSTANT_component" CBX_FILE_NAME="lpm_constant_3g6.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

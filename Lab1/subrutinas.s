@@ -4,6 +4,7 @@ HEX2 equ 0x82
 HEX3 equ 0x83
 SW equ 0x80
 BTN equ 0x81
+CTE16bit equ 19229d
 
 .data
 tab_h7s:	  	 ; _gfedcba 
@@ -23,8 +24,25 @@ tab_h7s:	  	 ; _gfedcba
 	db 10100001B ; d
 	db 10000110B ; e
 	db 10001110B ; F
+	
+reloj:
+	db 0d
+	db 0d
+	db 0d
 
 .text
+
+espero:
+	push AF
+	push DE
+	ld DE, CTE16bit
+	loop: dec DE
+	ld A,D
+	or E
+	jr NZ, loop
+	pop DE
+	pop AF
+	ret
 
 hexa7seg:
 	push hl
@@ -48,7 +66,8 @@ pbcda7seg:
 	ld b, a
 	ret
 	
-binapbcd:
+binapbcd:					; falto preservar bc
+	push bc
 	ld b, 0d
 	loop_binapbcd: 
 		cp 10d
@@ -62,9 +81,13 @@ binapbcd:
 		sla b
 		sla b
 		or  b
+	pop bc
 	ret
 
 despreloj:
+	push af
+	push bc
+	push de
 	ld a, (ix)				; cargamos los segundos al acumulador
 	call binapbcd
 	call pbcda7seg			; en bc tenemos los segundos codificados a 7seg
@@ -73,27 +96,32 @@ despreloj:
 	ld a, c
 	ld e, a					; preservamos lo que va en HEX2
 	out (HEX2), a			; por si hay que agregarle punto decimal
-	inc ix
-	ld a, (ix)				; cargamos las centesimas al acumulador
+	;inc ix
+	ld a, (ix+1)				; cargamos las centesimas al acumulador
 	call binapbcd
 	call pbcda7seg			; en bc tenemos las centesimas codificadas a 7seg
 	ld a, b
 	out (HEX1), a
 	ld a, c
 	out (HEX0), a
-	inc ix			
-	ld a, (ix)		
+	;inc ix			
+	ld a, (ix+2)		
 	cp 0d					; evalua como cero solo si la flag es 0x00
 	jp nz, fin_despreloj	; si no vale 0x00, vale 0xFF y no se debe agregar punto decimal
 	ld a, e					; recuperamos lo que va en HEX2
 	and 01111111B			; mascara para prender el punto decimal
 	out (HEX2), a
 	fin_despreloj: 
-	dec ix					; restauramos el registro ix
-	dec ix
+	;dec ix					; restauramos el registro ix
+	;dec ix
+	pop de
+	pop bc
+	pop af
 	ret
 	
 decreloj:
+	push af
+	push bc
 	ld b,(ix) ; cargar los segundos
 	ld a,(ix+1)	; cargar las centesimas
 	cp 10d		
@@ -119,6 +147,8 @@ decreloj:
 		ld (ix), 0d		; satura a cero el contador
 		ld (ix+1), 0d
 	fin_decreloj:
+	pop bc
+	pop af
 	ret
 
 

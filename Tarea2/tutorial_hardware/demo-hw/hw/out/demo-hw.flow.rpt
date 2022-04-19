@@ -1,0 +1,134 @@
+Flow report for demo-hw
+Mon Apr 18 13:05:38 2022
+Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Flow Summary
+  3. Flow Settings
+  4. Flow Non-Default Global Settings
+  5. Flow Elapsed Time
+  6. Flow OS Summary
+  7. Flow Log
+  8. Flow Messages
+  9. Flow Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++---------------------------------------------------------------------------------+
+; Flow Summary                                                                    ;
++------------------------------------+--------------------------------------------+
+; Flow Status                        ; Successful - Mon Apr 18 13:05:35 2022      ;
+; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
+; Revision Name                      ; demo-hw                                    ;
+; Top-level Entity Name              ; sistema_top                                ;
+; Family                             ; Cyclone III                                ;
+; Device                             ; EP3C16F484C6                               ;
+; Timing Models                      ; Final                                      ;
+; Total logic elements               ; 2,819 / 15,408 ( 18 % )                    ;
+;     Total combinational functions  ; 2,726 / 15,408 ( 18 % )                    ;
+;     Dedicated logic registers      ; 728 / 15,408 ( 5 % )                       ;
+; Total registers                    ; 728                                        ;
+; Total pins                         ; 19 / 347 ( 5 % )                           ;
+; Total virtual pins                 ; 0                                          ;
+; Total memory bits                  ; 394,240 / 516,096 ( 76 % )                 ;
+; Embedded Multiplier 9-bit elements ; 0 / 112 ( 0 % )                            ;
+; Total PLLs                         ; 1 / 4 ( 25 % )                             ;
++------------------------------------+--------------------------------------------+
+
+
++-----------------------------------------+
+; Flow Settings                           ;
++-------------------+---------------------+
+; Option            ; Setting             ;
++-------------------+---------------------+
+; Start date & time ; 04/18/2022 13:05:08 ;
+; Main task         ; Compilation         ;
+; Revision Name     ; demo-hw             ;
++-------------------+---------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                     ;
++-------------------------------------+---------------------------------+---------------+-------------+----------------+
+; Assignment Name                     ; Value                           ; Default Value ; Entity Name ; Section Id     ;
++-------------------------------------+---------------------------------+---------------+-------------+----------------+
+; COMPILER_SIGNATURE_ID               ; 154535782772898.165029790808764 ; --            ; --          ; --             ;
+; ENABLE_CLOCK_LATENCY                ; On                              ; Off           ; --          ; --             ;
+; IP_TOOL_NAME                        ; ALTPLL                          ; --            ; --          ; --             ;
+; IP_TOOL_VERSION                     ; 9.1                             ; --            ; --          ; --             ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                              ; --            ; --          ; --             ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                               ; --            ; --          ; --             ;
+; MISC_FILE                           ; mi_pll_divisor.bsf              ; --            ; --          ; --             ;
+; MISC_FILE                           ; mi_pll_divisor_inst.vhd         ; --            ; --          ; --             ;
+; MISC_FILE                           ; mi_pll_divisor.inc              ; --            ; --          ; --             ;
+; MISC_FILE                           ; mi_pll_divisor.cmp              ; --            ; --          ; --             ;
+; MISC_FILE                           ; mi_pll_divisor.ppf              ; --            ; --          ; --             ;
+; NOMINAL_CORE_SUPPLY_VOLTAGE         ; 1.2V                            ; --            ; --          ; --             ;
+; PARTITION_COLOR                     ; 16764057                        ; --            ; sistema_top ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING           ; --            ; sistema_top ; Top            ;
+; PARTITION_NETLIST_TYPE              ; SOURCE                          ; --            ; sistema_top ; Top            ;
+; PROJECT_OUTPUT_DIRECTORY            ; out                             ; --            ; --          ; --             ;
+; SOPC_BUILDER_SIGNATURE_ID           ; 005056C000080000012FBCD09855    ; --            ; --          ; --             ;
+; TOP_LEVEL_ENTITY                    ; sistema_top                     ; demo-hw       ; --          ; --             ;
+; USE_GENERATED_PHYSICAL_CONSTRAINTS  ; Off                             ; --            ; --          ; eda_blast_fpga ;
++-------------------------------------+---------------------------------+---------------+-------------+----------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                             ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis      ; 00:00:14     ; 1.0                     ; 4707 MB             ; 00:00:14                           ;
+; Fitter                    ; 00:00:09     ; 2.7                     ; 6161 MB             ; 00:00:13                           ;
+; Assembler                 ; 00:00:01     ; 1.0                     ; 4598 MB             ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:02     ; 1.0                     ; 4864 MB             ; 00:00:03                           ;
+; Total                     ; 00:00:26     ; --                      ; --                  ; 00:00:31                           ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+
+
++--------------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                            ;
++---------------------------+----------------------+-----------+------------+----------------+
+; Module Name               ; Machine Hostname     ; OS Name   ; OS Version ; Processor type ;
++---------------------------+----------------------+-----------+------------+----------------+
+; Analysis & Synthesis      ; Carlos-Lenovo-LEGION ; Windows 7 ; 6.2        ; x86_64         ;
+; Fitter                    ; Carlos-Lenovo-LEGION ; Windows 7 ; 6.2        ; x86_64         ;
+; Assembler                 ; Carlos-Lenovo-LEGION ; Windows 7 ; 6.2        ; x86_64         ;
+; TimeQuest Timing Analyzer ; Carlos-Lenovo-LEGION ; Windows 7 ; 6.2        ; x86_64         ;
++---------------------------+----------------------+-----------+------------+----------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_map --read_settings_files=on --write_settings_files=off demo-hw -c demo-hw
+quartus_fit --read_settings_files=off --write_settings_files=off demo-hw -c demo-hw
+quartus_asm --read_settings_files=off --write_settings_files=off demo-hw -c demo-hw
+quartus_sta demo-hw -c demo-hw
+
+
+
