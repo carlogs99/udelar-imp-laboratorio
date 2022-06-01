@@ -1,0 +1,23 @@
+{ "" "" "" "Primitive \"GND\" of instance \"inst30\" not used" {  } {  } 0 275008 "" 0 0 "Quartus II" 0 -1 0 ""}
+{ "" "" "" "VHDL Signal Declaration warning at bridged_jtag_uart.vhd(59): used implicit default value for signal \"z80avalonmm_0_read_data_valid_jtag_uart_0_avalon_jtag_slave\" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations." {  } {  } 0 10541 "" 0 0 "Quartus II" 0 -1 0 ""}
+{ "" "" "" "VHDL Variable Declaration warning at altera_europa_support_lib.vhd(350): used initial value expression for variable \"arg_copy\" because variable was never assigned a value" {  } {  } 0 10542 "" 0 0 "Quartus II" 0 -1 0 ""}
+{ "" "" "" "VHDL Variable Declaration warning at altera_europa_support_lib.vhd(354): used initial value expression for variable \"arg_length\" because variable was never assigned a value" {  } {  } 0 10542 "" 0 0 "Quartus II" 0 -1 0 ""}
+{ "" "" "" "Verilog HDL or VHDL warning at z80avalonmm.vhd(43): object \"s_control_register\" assigned a value but never read" {  } {  } 0 10036 "" 0 0 "Quartus II" 0 -1 0 ""}
+{ "" "" "" "Byte addressed memory initialization file \"monitor.hex\" was read in the word-addressed format" {  } {  } 0 113007 "" 0 0 "Quartus II" 0 -1 0 ""}
+{ "" "" "" "Verilog HDL assignment warning at button_debouncer.v(81): truncated value with size 32 to match size of target (1)" {  } {  } 0 10230 "" 0 0 "Quartus II" 0 -1 0 ""}
+{ "" "" "" "Verilog HDL assignment warning at button_debouncer.v(82): truncated value with size 32 to match size of target (21)" {  } {  } 0 10230 "" 0 0 "Quartus II" 0 -1 0 ""}
+{ "" "" "" "Verilog HDL assignment warning at button_debouncer.v(91): truncated value with size 32 to match size of target (21)" {  } {  } 0 10230 "" 0 0 "Quartus II" 0 -1 0 ""}
+{ "" "" "" "Verilog HDL assignment warning at button_debouncer.v(93): truncated value with size 32 to match size of target (21)" {  } {  } 0 10230 "" 0 0 "Quartus II" 0 -1 0 ""}
+{ "" "" "" "Verilog HDL assignment warning at button_debouncer.v(81): truncated value with size 32 to match size of target (10)" {  } {  } 0 10230 "" 0 0 "Quartus II" 0 -1 0 ""}
+{ "" "" "" "Verilog HDL assignment warning at button_debouncer.v(81): truncated value with size 32 to match size of target (2)" {  } {  } 0 10230 "" 0 0 "Quartus II" 0 -1 0 ""}
+{ "" "" "" "Output pins are stuck at VCC or GND" {  } {  } 0 13024 "" 0 0 "Quartus II" 0 -1 0 ""}
+{ "" "" "" "Synopsys Design Constraints File file not found: 'lab_intup.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design." {  } {  } 0 332012 "" 0 0 "Quartus II" 0 -1 0 ""}
+{ "" "" "" "Node: CLOCK_50 was determined to be a clock but was found without an associated clock assignment." {  } {  } 0 332060 "" 0 0 "Quartus II" 0 -1 0 ""}
+{ "" "" "" "Node: button_debouncer:inst24\|data_out\[9\] was determined to be a clock but was found without an associated clock assignment." {  } {  } 0 332060 "" 0 0 "Quartus II" 0 -1 0 ""}
+{ "" "" "" "PLL cross checking found inconsistent PLL clock settings:" {  } {  } 0 332056 "" 0 0 "Quartus II" 0 -1 0 ""}
+{ "" "" "" "The following clock transfers have no clock uncertainty assignment. For more accurate results, apply clock uncertainty assignments or use the derive_clock_uncertainty command." {  } {  } 0 332168 "" 0 0 "Quartus II" 0 -1 0 ""}
+{ "" "" "" "1 hierarchies have connectivity warnings - see the Connectivity Checks report folder" {  } {  } 0 12241 "" 0 0 "Quartus II" 0 -1 0 ""}
+{ "" "" "" "16 pins must meet Altera requirements for 3.3-, 3.0-, and 2.5-V interfaces. For more information, refer to AN 447: Interfacing Cyclone III Devices with 3.3/3.0/2.5-V LVTTL/LVCMOS I/O Systems." {  } {  } 0 169177 "" 0 0 "Quartus II" 0 -1 0 ""}
+{ "" "" "" "Following 2 pins have no output enable or a GND or VCC output enable - later changes to this connectivity may change fitting results" {  } {  } 0 169064 "" 0 0 "Quartus II" 0 -1 0 ""}
+{ "" "" "" "Design contains 3 input pin(s) that do not drive logic" {  } {  } 0 21074 "" 0 0 "Quartus II" 0 -1 0 ""}
+{ "" "" "" "*" {  } {  } 0 292013 "" 0 0 "Quartus II" 0 -1 0 ""}

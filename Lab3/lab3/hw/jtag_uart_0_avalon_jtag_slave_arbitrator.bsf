@@ -1,0 +1,204 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+*/
+(header "symbol" (version "1.1"))
+(symbol
+	(rect 16 16 680 304)
+	(text "jtag_uart_0_avalon_jtag_slave_arbitrator" (rect 5 0 204 12)(font "Arial" ))
+	(text "inst" (rect 8 272 25 284)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "clk" (rect 0 0 14 12)(font "Arial" ))
+		(text "clk" (rect 21 27 35 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 1))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "jtag_uart_0_avalon_jtag_slave_dataavailable" (rect 0 0 220 12)(font "Arial" ))
+		(text "jtag_uart_0_avalon_jtag_slave_dataavailable" (rect 21 43 241 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 1))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "jtag_uart_0_avalon_jtag_slave_readdata[31..0]" (rect 0 0 230 12)(font "Arial" ))
+		(text "jtag_uart_0_avalon_jtag_slave_readdata[31..0]" (rect 21 59 251 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64)(line_width 3))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "jtag_uart_0_avalon_jtag_slave_readyfordata" (rect 0 0 219 12)(font "Arial" ))
+		(text "jtag_uart_0_avalon_jtag_slave_readyfordata" (rect 21 75 240 87)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80)(line_width 1))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "jtag_uart_0_avalon_jtag_slave_waitrequest" (rect 0 0 211 12)(font "Arial" ))
+		(text "jtag_uart_0_avalon_jtag_slave_waitrequest" (rect 21 91 232 103)(font "Arial" ))
+		(line (pt 0 96)(pt 16 96)(line_width 1))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "reset_n" (rect 0 0 36 12)(font "Arial" ))
+		(text "reset_n" (rect 21 107 57 119)(font "Arial" ))
+		(line (pt 0 112)(pt 16 112)(line_width 1))
+	)
+	(port
+		(pt 0 128)
+		(input)
+		(text "z80avalonmm_0_avalon_master_address_to_slave[31..0]" (rect 0 0 284 12)(font "Arial" ))
+		(text "z80avalonmm_0_avalon_master_address_to_slave[31..0]" (rect 21 123 305 135)(font "Arial" ))
+		(line (pt 0 128)(pt 16 128)(line_width 3))
+	)
+	(port
+		(pt 0 144)
+		(input)
+		(text "z80avalonmm_0_avalon_master_read_n" (rect 0 0 198 12)(font "Arial" ))
+		(text "z80avalonmm_0_avalon_master_read_n" (rect 21 139 219 151)(font "Arial" ))
+		(line (pt 0 144)(pt 16 144)(line_width 1))
+	)
+	(port
+		(pt 0 160)
+		(input)
+		(text "z80avalonmm_0_avalon_master_write_n" (rect 0 0 199 12)(font "Arial" ))
+		(text "z80avalonmm_0_avalon_master_write_n" (rect 21 155 220 167)(font "Arial" ))
+		(line (pt 0 160)(pt 16 160)(line_width 1))
+	)
+	(port
+		(pt 0 176)
+		(input)
+		(text "z80avalonmm_0_avalon_master_writedata[31..0]" (rect 0 0 240 12)(font "Arial" ))
+		(text "z80avalonmm_0_avalon_master_writedata[31..0]" (rect 21 171 261 183)(font "Arial" ))
+		(line (pt 0 176)(pt 16 176)(line_width 3))
+	)
+	(port
+		(pt 664 32)
+		(output)
+		(text "d1_jtag_uart_0_avalon_jtag_slave_end_xfer" (rect 0 0 217 12)(font "Arial" ))
+		(text "d1_jtag_uart_0_avalon_jtag_slave_end_xfer" (rect 426 27 643 39)(font "Arial" ))
+		(line (pt 664 32)(pt 648 32)(line_width 1))
+	)
+	(port
+		(pt 664 48)
+		(output)
+		(text "jtag_uart_0_avalon_jtag_slave_address" (rect 0 0 194 12)(font "Arial" ))
+		(text "jtag_uart_0_avalon_jtag_slave_address" (rect 449 43 643 55)(font "Arial" ))
+		(line (pt 664 48)(pt 648 48)(line_width 1))
+	)
+	(port
+		(pt 664 64)
+		(output)
+		(text "jtag_uart_0_avalon_jtag_slave_chipselect" (rect 0 0 205 12)(font "Arial" ))
+		(text "jtag_uart_0_avalon_jtag_slave_chipselect" (rect 438 59 643 71)(font "Arial" ))
+		(line (pt 664 64)(pt 648 64)(line_width 1))
+	)
+	(port
+		(pt 664 80)
+		(output)
+		(text "jtag_uart_0_avalon_jtag_slave_dataavailable_from_sa" (rect 0 0 267 12)(font "Arial" ))
+		(text "jtag_uart_0_avalon_jtag_slave_dataavailable_from_sa" (rect 376 75 643 87)(font "Arial" ))
+		(line (pt 664 80)(pt 648 80)(line_width 1))
+	)
+	(port
+		(pt 664 96)
+		(output)
+		(text "jtag_uart_0_avalon_jtag_slave_read_n" (rect 0 0 188 12)(font "Arial" ))
+		(text "jtag_uart_0_avalon_jtag_slave_read_n" (rect 455 91 643 103)(font "Arial" ))
+		(line (pt 664 96)(pt 648 96)(line_width 1))
+	)
+	(port
+		(pt 664 112)
+		(output)
+		(text "jtag_uart_0_avalon_jtag_slave_readdata_from_sa[31..0]" (rect 0 0 277 12)(font "Arial" ))
+		(text "jtag_uart_0_avalon_jtag_slave_readdata_from_sa[31..0]" (rect 366 107 643 119)(font "Arial" ))
+		(line (pt 664 112)(pt 648 112)(line_width 3))
+	)
+	(port
+		(pt 664 128)
+		(output)
+		(text "jtag_uart_0_avalon_jtag_slave_readyfordata_from_sa" (rect 0 0 266 12)(font "Arial" ))
+		(text "jtag_uart_0_avalon_jtag_slave_readyfordata_from_sa" (rect 377 123 643 135)(font "Arial" ))
+		(line (pt 664 128)(pt 648 128)(line_width 1))
+	)
+	(port
+		(pt 664 144)
+		(output)
+		(text "jtag_uart_0_avalon_jtag_slave_reset_n" (rect 0 0 192 12)(font "Arial" ))
+		(text "jtag_uart_0_avalon_jtag_slave_reset_n" (rect 451 139 643 151)(font "Arial" ))
+		(line (pt 664 144)(pt 648 144)(line_width 1))
+	)
+	(port
+		(pt 664 160)
+		(output)
+		(text "jtag_uart_0_avalon_jtag_slave_waitrequest_from_sa" (rect 0 0 258 12)(font "Arial" ))
+		(text "jtag_uart_0_avalon_jtag_slave_waitrequest_from_sa" (rect 385 155 643 167)(font "Arial" ))
+		(line (pt 664 160)(pt 648 160)(line_width 1))
+	)
+	(port
+		(pt 664 176)
+		(output)
+		(text "jtag_uart_0_avalon_jtag_slave_write_n" (rect 0 0 189 12)(font "Arial" ))
+		(text "jtag_uart_0_avalon_jtag_slave_write_n" (rect 454 171 643 183)(font "Arial" ))
+		(line (pt 664 176)(pt 648 176)(line_width 1))
+	)
+	(port
+		(pt 664 192)
+		(output)
+		(text "jtag_uart_0_avalon_jtag_slave_writedata[31..0]" (rect 0 0 231 12)(font "Arial" ))
+		(text "jtag_uart_0_avalon_jtag_slave_writedata[31..0]" (rect 412 187 643 199)(font "Arial" ))
+		(line (pt 664 192)(pt 648 192)(line_width 3))
+	)
+	(port
+		(pt 664 208)
+		(output)
+		(text "z80avalonmm_0_granted_jtag_uart_0_avalon_jtag_slave" (rect 0 0 278 12)(font "Arial" ))
+		(text "z80avalonmm_0_granted_jtag_uart_0_avalon_jtag_slave" (rect 365 203 643 215)(font "Arial" ))
+		(line (pt 664 208)(pt 648 208)(line_width 1))
+	)
+	(port
+		(pt 664 224)
+		(output)
+		(text "z80avalonmm_0_qualified_request_jtag_uart_0_avalon_jtag_slave" (rect 0 0 325 12)(font "Arial" ))
+		(text "z80avalonmm_0_qualified_request_jtag_uart_0_avalon_jtag_slave" (rect 318 219 643 231)(font "Arial" ))
+		(line (pt 664 224)(pt 648 224)(line_width 1))
+	)
+	(port
+		(pt 664 240)
+		(output)
+		(text "z80avalonmm_0_read_data_valid_jtag_uart_0_avalon_jtag_slave" (rect 0 0 319 12)(font "Arial" ))
+		(text "z80avalonmm_0_read_data_valid_jtag_uart_0_avalon_jtag_slave" (rect 324 235 643 247)(font "Arial" ))
+		(line (pt 664 240)(pt 648 240)(line_width 1))
+	)
+	(port
+		(pt 664 256)
+		(output)
+		(text "z80avalonmm_0_requests_jtag_uart_0_avalon_jtag_slave" (rect 0 0 284 12)(font "Arial" ))
+		(text "z80avalonmm_0_requests_jtag_uart_0_avalon_jtag_slave" (rect 359 251 643 263)(font "Arial" ))
+		(line (pt 664 256)(pt 648 256)(line_width 1))
+	)
+	(drawing
+		(rectangle (rect 16 16 648 272)(line_width 1))
+	)
+)

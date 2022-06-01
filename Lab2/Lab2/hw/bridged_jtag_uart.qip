@@ -1,0 +1,5 @@
+set_global_assignment -name VHDL_FILE z80avalonmm_0.vhd
+set_global_assignment -name TCL_FILE z80avalonmm_hw.tcl
+set_global_assignment -name VHDL_FILE z80avalonmm.vhd
+set_global_assignment -name SOPC_BUILDER_SIGNATURE_ID 005056C000080000012FBCD09855 
+ 

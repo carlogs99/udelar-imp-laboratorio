@@ -1,0 +1,168 @@
+Flow report for lab_intup
+Fri May 20 12:00:24 2022
+Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Flow Summary
+  3. Flow Settings
+  4. Flow Non-Default Global Settings
+  5. Flow Elapsed Time
+  6. Flow OS Summary
+  7. Flow Log
+  8. Flow Messages
+  9. Flow Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++---------------------------------------------------------------------------------+
+; Flow Summary                                                                    ;
++------------------------------------+--------------------------------------------+
+; Flow Status                        ; Successful - Fri May 20 12:00:24 2022      ;
+; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
+; Revision Name                      ; lab_intup                                  ;
+; Top-level Entity Name              ; sistema_top                                ;
+; Family                             ; Cyclone III                                ;
+; Device                             ; EP3C16F484C6                               ;
+; Timing Models                      ; Final                                      ;
+; Total logic elements               ; 3,594 / 15,408 ( 23 % )                    ;
+;     Total combinational functions  ; 3,332 / 15,408 ( 22 % )                    ;
+;     Dedicated logic registers      ; 1,168 / 15,408 ( 8 % )                     ;
+; Total registers                    ; 1168                                       ;
+; Total pins                         ; 56 / 347 ( 16 % )                          ;
+; Total virtual pins                 ; 0                                          ;
+; Total memory bits                  ; 394,752 / 516,096 ( 76 % )                 ;
+; Embedded Multiplier 9-bit elements ; 0 / 112 ( 0 % )                            ;
+; Total PLLs                         ; 1 / 4 ( 25 % )                             ;
++------------------------------------+--------------------------------------------+
+
+
++-----------------------------------------+
+; Flow Settings                           ;
++-------------------+---------------------+
+; Option            ; Setting             ;
++-------------------+---------------------+
+; Start date & time ; 05/20/2022 11:59:23 ;
+; Main task         ; Compilation         ;
+; Revision Name     ; lab_intup           ;
++-------------------+---------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                            ;
++-------------------------------------+------------------------------------------------------+---------------+-------------+------------------+
+; Assignment Name                     ; Value                                                ; Default Value ; Entity Name ; Section Id       ;
++-------------------------------------+------------------------------------------------------+---------------+-------------+------------------+
+; AUTO_EXPORT_VER_COMPATIBLE_DB       ; On                                                   ; Off           ; --          ; --               ;
+; COMPILER_SIGNATURE_ID               ; 154535782772898.165305876219428                      ; --            ; --          ; --               ;
+; CYCLONEII_OPTIMIZATION_TECHNIQUE    ; Speed                                                ; Balanced      ; --          ; --               ;
+; ENABLE_CLOCK_LATENCY                ; On                                                   ; Off           ; --          ; --               ;
+; ENABLE_SIGNALTAP                    ; On                                                   ; --            ; --          ; --               ;
+; IP_TOOL_NAME                        ; ALTPLL                                               ; --            ; --          ; --               ;
+; IP_TOOL_VERSION                     ; 9.1                                                  ; --            ; --          ; --               ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                                   ; --            ; --          ; --               ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                                    ; --            ; --          ; --               ;
+; MISC_FILE                           ; mi_pll_divisor.bsf                                   ; --            ; --          ; --               ;
+; MISC_FILE                           ; mi_pll_divisor_inst.vhd                              ; --            ; --          ; --               ;
+; MISC_FILE                           ; mi_pll_divisor.inc                                   ; --            ; --          ; --               ;
+; MISC_FILE                           ; mi_pll_divisor.cmp                                   ; --            ; --          ; --               ;
+; MISC_FILE                           ; mi_pll_divisor.ppf                                   ; --            ; --          ; --               ;
+; PARTITION_COLOR                     ; 16764057                                             ; --            ; sistema_top ; Top              ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING                                ; --            ; sistema_top ; Top              ;
+; PARTITION_NETLIST_TYPE              ; SOURCE                                               ; --            ; sistema_top ; Top              ;
+; PROJECT_OUTPUT_DIRECTORY            ; out                                                  ; --            ; --          ; --               ;
+; SAVE_DISK_SPACE                     ; Off                                                  ; On            ; --          ; --               ;
+; SEARCH_PATH                         ; ../../../iie-ctc                                     ; --            ; --          ; --               ;
+; SEARCH_PATH                         ; ../../../t80/syn/altera/src                          ; --            ; --          ; --               ;
+; SLD_FILE                            ; db/stp2_auto_stripped.stp                            ; --            ; --          ; --               ;
+; SLD_NODE_CREATOR_ID                 ; 110                                                  ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_ENTITY_NAME                ; sld_signaltap                                        ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_RAM_BLOCK_TYPE=AUTO                              ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_NODE_INFO=805334528                              ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_POWER_UP_TRIGGER=0                               ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_STORAGE_QUALIFIER_INVERSION_MASK_LENGTH=0        ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_SEGMENT_SIZE=128                                 ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_ATTRIBUTE_MEM_MODE=OFF                           ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_STATE_FLOW_USE_GENERATED=0                       ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_STATE_BITS=11                                    ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_BUFFER_FULL_STOP=1                               ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_CURRENT_RESOURCE_WIDTH=1                         ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_TRIGGER_LEVEL=1                                  ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_SAMPLE_DEPTH=128                                 ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_TRIGGER_IN_ENABLED=0                             ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_ADVANCED_TRIGGER_ENTITY=basic,1,                 ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_TRIGGER_LEVEL_PIPELINE=1                         ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_ENABLE_ADVANCED_TRIGGER=0                        ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_DATA_BITS=4                                      ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_TRIGGER_BITS=4                                   ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_INVERSION_MASK=000000000000000000000000000000000 ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_INVERSION_MASK_LENGTH=33                         ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_NODE_CRC_LOWORD=10408                            ; --            ; --          ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_NODE_CRC_HIWORD=13283                            ; --            ; --          ; auto_signaltap_0 ;
+; SOPC_BUILDER_SIGNATURE_ID           ; 005056C000080000012FBCD09855                         ; --            ; --          ; --               ;
+; TOP_LEVEL_ENTITY                    ; sistema_top                                          ; lab_intup     ; --          ; --               ;
+; USE_GENERATED_PHYSICAL_CONSTRAINTS  ; Off                                                  ; --            ; --          ; eda_blast_fpga   ;
+; USE_SIGNALTAP_FILE                  ; out/stp2.stp                                         ; --            ; --          ; --               ;
++-------------------------------------+------------------------------------------------------+---------------+-------------+------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                             ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis      ; 00:00:24     ; 1.0                     ; 4731 MB             ; 00:00:20                           ;
+; Fitter                    ; 00:00:16     ; 2.1                     ; 6166 MB             ; 00:00:23                           ;
+; Assembler                 ; 00:00:02     ; 1.0                     ; 4603 MB             ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:04     ; 1.0                     ; 4875 MB             ; 00:00:04                           ;
+; Database Export           ; 00:00:09     ; 1.0                     ; 4675 MB             ; 00:00:08                           ;
+; Total                     ; 00:00:55     ; --                      ; --                  ; 00:00:56                           ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+
+
++--------------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                            ;
++---------------------------+----------------------+-----------+------------+----------------+
+; Module Name               ; Machine Hostname     ; OS Name   ; OS Version ; Processor type ;
++---------------------------+----------------------+-----------+------------+----------------+
+; Analysis & Synthesis      ; Carlos-Lenovo-LEGION ; Windows 7 ; 6.2        ; x86_64         ;
+; Fitter                    ; Carlos-Lenovo-LEGION ; Windows 7 ; 6.2        ; x86_64         ;
+; Assembler                 ; Carlos-Lenovo-LEGION ; Windows 7 ; 6.2        ; x86_64         ;
+; TimeQuest Timing Analyzer ; Carlos-Lenovo-LEGION ; Windows 7 ; 6.2        ; x86_64         ;
+; Database Export           ; Carlos-Lenovo-LEGION ; Windows 7 ; 6.2        ; x86_64         ;
++---------------------------+----------------------+-----------+------------+----------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_map --read_settings_files=on --write_settings_files=off lab_intup -c lab_intup
+quartus_fit --read_settings_files=off --write_settings_files=off lab_intup -c lab_intup
+quartus_asm --read_settings_files=off --write_settings_files=off lab_intup -c lab_intup
+quartus_sta lab_intup -c lab_intup
+quartus_cdb lab_intup -c lab_intup --export_database=C:/Users/carlos/Downloads/IMP/IMP_laboratorio/Lab2/Lab2/hw/export_db
+
+
+

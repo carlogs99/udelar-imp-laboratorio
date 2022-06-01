@@ -1,0 +1,98 @@
+
+State Machine - |sistema_top|sistema:inst|bloquetimer:inst4|timer:b2v_inst21|state
+Name state.q6 state.q5 state.q4 state.q3 state.q2 state.q1 state.q0 
+state.q0 0 0 0 0 0 0 0 
+state.q1 0 0 0 0 0 1 1 
+state.q2 0 0 0 0 1 0 1 
+state.q3 0 0 0 1 0 0 1 
+state.q4 0 0 1 0 0 0 1 
+state.q5 0 1 0 0 0 0 1 
+state.q6 1 0 0 0 0 0 1 
+
+State Machine - |sistema_top|sistema:inst|bloquetimer:inst4|timer:b2v_inst21|contador8bits:cont8|generador_pulsos:puls|state
+Name state.q2 state.q1 state.q0 
+state.q0 0 0 0 
+state.q1 0 1 1 
+state.q2 1 0 1 
+
+State Machine - |sistema_top|sistema:inst|bloquetimer:inst4|control:b2v_inst1|estado
+Name estado.p3 estado.p2 estado.p1 estado.p0 
+estado.p0 0 0 0 0 
+estado.p1 0 0 1 1 
+estado.p2 0 1 0 1 
+estado.p3 1 0 0 1 
+
+State Machine - |sistema_top|sistema:inst|bloquetimer:inst4|control:b2v_inst1|state
+Name state.q4 state.q3 state.q2 state.q1 state.q0 
+state.q0 0 0 0 0 0 
+state.q1 0 0 0 1 1 
+state.q2 0 0 1 0 1 
+state.q3 0 1 0 0 1 
+state.q4 1 0 0 0 1 
+
+State Machine - |sistema_top|sistema:inst|bloquecontador:inst3|counter:b2v_inst1|state
+Name state.q4 state.q3 state.q2 state.q1 state.q0 
+state.q0 0 0 0 0 0 
+state.q1 0 0 0 1 1 
+state.q2 0 0 1 0 1 
+state.q3 0 1 0 0 1 
+state.q4 1 0 0 0 1 
+
+State Machine - |sistema_top|sistema:inst|bloquecontador:inst3|counter:b2v_inst1|contador8bits:cont8|generador_pulsos:puls|state
+Name state.q2 state.q1 state.q0 
+state.q0 0 0 0 
+state.q1 0 1 1 
+state.q2 1 0 1 
+
+State Machine - |sistema_top|sistema:inst|bloquecontador:inst3|control:b2v_inst|estado
+Name estado.p3 estado.p2 estado.p1 estado.p0 
+estado.p0 0 0 0 0 
+estado.p1 0 0 1 1 
+estado.p2 0 1 0 1 
+estado.p3 1 0 0 1 
+
+State Machine - |sistema_top|sistema:inst|bloquecontador:inst3|control:b2v_inst|state
+Name state.q4 state.q3 state.q2 state.q1 state.q0 
+state.q0 0 0 0 0 0 
+state.q1 0 0 0 1 1 
+state.q2 0 0 1 0 1 
+state.q3 0 1 0 0 1 
+state.q4 1 0 0 0 1 
+
+State Machine - |sistema_top|sistema:inst|controlador_de_interrupciones:inst45|control_INTA_modo1:bloque_control_INTA_modo1|state_ack
+Name state_ack.esconder_INTA_srv state_ack.dar_INTA state_ack.esconder_INTA_pend state_ack.reposo 
+state_ack.reposo 0 0 0 0 
+state_ack.esconder_INTA_pend 0 0 1 1 
+state_ack.dar_INTA 0 1 0 1 
+state_ack.esconder_INTA_srv 1 0 0 1 
+
+State Machine - |sistema_top|sistema:inst|controlador_de_interrupciones:inst45|detector_RETI:bloque_detector_RETI|state_detRETI
+Name state_detRETI.Q_RETI state_detRETI.Q_ED state_detRETI.Q_aux2 state_detRETI.Q_aux1 state_detRETI.Q_reposo 
+state_detRETI.Q_reposo 0 0 0 0 0 
+state_detRETI.Q_aux1 0 0 0 1 1 
+state_detRETI.Q_aux2 0 0 1 0 1 
+state_detRETI.Q_ED 0 1 0 0 1 
+state_detRETI.Q_RETI 1 0 0 0 1 
+
+State Machine - |sistema_top|sistema:inst|controlador_de_interrupciones:inst45|detector_RETI:bloque_detector_RETI|state_finM1
+Name state_finM1.Q_finM1 state_finM1.Q_M1 state_finM1.Q0 
+state_finM1.Q0 0 0 0 
+state_finM1.Q_M1 0 1 1 
+state_finM1.Q_finM1 1 0 1 
+
+State Machine - |sistema_top|sistema:inst|controlador_de_interrupciones:inst45|control_CI:bloque_control|state
+Name state.en_servicio state.colocar_N state.pendiente state.pendiente_INTA state.inactivo 
+state.inactivo 0 0 0 0 0 
+state.pendiente_INTA 0 0 0 1 1 
+state.pendiente 0 0 1 0 1 
+state.colocar_N 0 1 0 0 1 
+state.en_servicio 1 0 0 0 1 
+
+State Machine - |sistema_top|sistema:inst|bridged_jtag_uart:inst7|z80avalonmm_0:the_z80avalonmm_0|Z80AvalonMM:z80avalonmm_0|STATE
+Name STATE.INVALID STATE.AVALON_RD_DONE STATE.AVALON_RD STATE.AVALON_WR_DONE STATE.AVALON_WR STATE.IDLE 
+STATE.IDLE 0 0 0 0 0 0 
+STATE.AVALON_WR 0 0 0 0 1 1 
+STATE.AVALON_WR_DONE 0 0 0 1 0 1 
+STATE.AVALON_RD 0 0 1 0 0 1 
+STATE.AVALON_RD_DONE 0 1 0 0 0 1 
+STATE.INVALID 1 0 0 0 0 1 

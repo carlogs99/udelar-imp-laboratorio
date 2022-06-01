@@ -1,0 +1,120 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+*/
+(header "symbol" (version "1.1"))
+(symbol
+	(rect 16 16 248 176)
+	(text "sistema" (rect 5 0 48 14)(font "Arial" (font_size 8)))
+	(text "inst" (rect 8 144 25 156)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "RESET_n" (rect 0 0 82 18)(font "Arial" (font_size 12)))
+		(text "RESET_n" (rect 21 27 103 45)(font "Arial" (font_size 12)))
+		(line (pt 0 32)(pt 16 32)(line_width 1))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "CLK" (rect 0 0 37 18)(font "Arial" (font_size 12)))
+		(text "CLK" (rect 21 43 58 61)(font "Arial" (font_size 12)))
+		(line (pt 0 48)(pt 16 48)(line_width 1))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "NMI" (rect 0 0 31 18)(font "Arial" (font_size 12)))
+		(text "NMI" (rect 21 59 52 77)(font "Arial" (font_size 12)))
+		(line (pt 0 64)(pt 16 64)(line_width 1))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "SW[7..0]" (rect 0 0 70 18)(font "Arial" (font_size 12)))
+		(text "SW[7..0]" (rect 21 75 91 93)(font "Arial" (font_size 12)))
+		(line (pt 0 80)(pt 16 80)(line_width 3))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "PSCLK_I" (rect 0 0 77 18)(font "Arial" (font_size 12)))
+		(text "PSCLK_I" (rect 21 91 98 109)(font "Arial" (font_size 12)))
+		(line (pt 0 96)(pt 16 96)(line_width 1))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "PSDAT_I" (rect 0 0 77 18)(font "Arial" (font_size 12)))
+		(text "PSDAT_I" (rect 21 107 98 125)(font "Arial" (font_size 12)))
+		(line (pt 0 112)(pt 16 112)(line_width 1))
+	)
+	(port
+		(pt 232 32)
+		(output)
+		(text "DIG0[7..0]" (rect 0 0 82 18)(font "Arial" (font_size 12)))
+		(text "DIG0[7..0]" (rect 129 27 211 45)(font "Arial" (font_size 12)))
+		(line (pt 232 32)(pt 216 32)(line_width 3))
+	)
+	(port
+		(pt 232 48)
+		(output)
+		(text "DIG1[7..0]" (rect 0 0 82 18)(font "Arial" (font_size 12)))
+		(text "DIG1[7..0]" (rect 129 43 211 61)(font "Arial" (font_size 12)))
+		(line (pt 232 48)(pt 216 48)(line_width 3))
+	)
+	(port
+		(pt 232 64)
+		(output)
+		(text "DIG2[7..0]" (rect 0 0 82 18)(font "Arial" (font_size 12)))
+		(text "DIG2[7..0]" (rect 129 59 211 77)(font "Arial" (font_size 12)))
+		(line (pt 232 64)(pt 216 64)(line_width 3))
+	)
+	(port
+		(pt 232 80)
+		(output)
+		(text "DIG3[7..0]" (rect 0 0 82 18)(font "Arial" (font_size 12)))
+		(text "DIG3[7..0]" (rect 129 75 211 93)(font "Arial" (font_size 12)))
+		(line (pt 232 80)(pt 216 80)(line_width 3))
+	)
+	(port
+		(pt 232 96)
+		(output)
+		(text "LEDG[7..0]" (rect 0 0 92 18)(font "Arial" (font_size 12)))
+		(text "LEDG[7..0]" (rect 119 91 211 109)(font "Arial" (font_size 12)))
+		(line (pt 232 96)(pt 216 96)(line_width 3))
+	)
+	(port
+		(pt 232 112)
+		(output)
+		(text "PSCLK_O" (rect 0 0 88 18)(font "Arial" (font_size 12)))
+		(text "PSCLK_O" (rect 123 107 211 125)(font "Arial" (font_size 12)))
+		(line (pt 232 112)(pt 216 112)(line_width 1))
+	)
+	(port
+		(pt 232 128)
+		(output)
+		(text "PSDAT_O" (rect 0 0 88 18)(font "Arial" (font_size 12)))
+		(text "PSDAT_O" (rect 123 123 211 141)(font "Arial" (font_size 12)))
+		(line (pt 232 128)(pt 216 128)(line_width 1))
+	)
+	(drawing
+		(rectangle (rect 16 16 216 144)(line_width 1))
+	)
+)

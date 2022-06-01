@@ -1,0 +1,5 @@
+PLL_Name	mi_pll_divisor:inst6|altpll:altpll_component|mi_pll_divisor_altpll:auto_generated|pll1
+PLLJITTER	30
+PLLSPEmax	84
+PLLSPEmin	-53
+

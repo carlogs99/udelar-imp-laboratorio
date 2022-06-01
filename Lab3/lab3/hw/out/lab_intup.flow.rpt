@@ -1,0 +1,146 @@
+Flow report for lab_intup
+Wed Jun 01 16:04:32 2022
+Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Flow Summary
+  3. Flow Settings
+  4. Flow Non-Default Global Settings
+  5. Flow Elapsed Time
+  6. Flow OS Summary
+  7. Flow Log
+  8. Flow Messages
+  9. Flow Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++---------------------------------------------------------------------------------+
+; Flow Summary                                                                    ;
++------------------------------------+--------------------------------------------+
+; Flow Status                        ; Successful - Wed Jun 01 16:04:32 2022      ;
+; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
+; Revision Name                      ; lab_intup                                  ;
+; Top-level Entity Name              ; sistema_top                                ;
+; Family                             ; Cyclone III                                ;
+; Device                             ; EP3C16F484C6                               ;
+; Timing Models                      ; Final                                      ;
+; Total logic elements               ; 3,381 / 15,408 ( 22 % )                    ;
+;     Total combinational functions  ; 3,200 / 15,408 ( 21 % )                    ;
+;     Dedicated logic registers      ; 958 / 15,408 ( 6 % )                       ;
+; Total registers                    ; 958                                        ;
+; Total pins                         ; 58 / 347 ( 17 % )                          ;
+; Total virtual pins                 ; 0                                          ;
+; Total memory bits                  ; 394,240 / 516,096 ( 76 % )                 ;
+; Embedded Multiplier 9-bit elements ; 0 / 112 ( 0 % )                            ;
+; Total PLLs                         ; 1 / 4 ( 25 % )                             ;
++------------------------------------+--------------------------------------------+
+
+
++-----------------------------------------+
+; Flow Settings                           ;
++-------------------+---------------------+
+; Option            ; Setting             ;
++-------------------+---------------------+
+; Start date & time ; 06/01/2022 16:03:31 ;
+; Main task         ; Compilation         ;
+; Revision Name     ; lab_intup           ;
++-------------------+---------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                 ;
++-------------------------------------+---------------------------------------------+---------------+-------------+----------------+
+; Assignment Name                     ; Value                                       ; Default Value ; Entity Name ; Section Id     ;
++-------------------------------------+---------------------------------------------+---------------+-------------+----------------+
+; AUTO_EXPORT_VER_COMPATIBLE_DB       ; On                                          ; Off           ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 154535782772898.165411021116140             ; --            ; --          ; --             ;
+; CYCLONEII_OPTIMIZATION_TECHNIQUE    ; Speed                                       ; Balanced      ; --          ; --             ;
+; IP_TOOL_NAME                        ; LPM_FF                                      ; --            ; --          ; --             ;
+; IP_TOOL_NAME                        ; ALTPLL                                      ; --            ; --          ; --             ;
+; IP_TOOL_VERSION                     ; 9.0                                         ; --            ; --          ; --             ;
+; IP_TOOL_VERSION                     ; 9.1                                         ; --            ; --          ; --             ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                          ; --            ; --          ; --             ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                           ; --            ; --          ; --             ;
+; MISC_FILE                           ; lab_intup.dpf                               ; --            ; --          ; --             ;
+; MISC_FILE                           ; ../../t80/syn/altera/src/register8_inst.vhd ; --            ; --          ; --             ;
+; MISC_FILE                           ; ../../t80/syn/altera/src/register8.inc      ; --            ; --          ; --             ;
+; MISC_FILE                           ; ../../t80/syn/altera/src/register8.cmp      ; --            ; --          ; --             ;
+; MISC_FILE                           ; mi_pll_divisor.bsf                          ; --            ; --          ; --             ;
+; MISC_FILE                           ; mi_pll_divisor_inst.vhd                     ; --            ; --          ; --             ;
+; MISC_FILE                           ; mi_pll_divisor.inc                          ; --            ; --          ; --             ;
+; MISC_FILE                           ; mi_pll_divisor.cmp                          ; --            ; --          ; --             ;
+; MISC_FILE                           ; mi_pll_divisor.ppf                          ; --            ; --          ; --             ;
+; PARTITION_COLOR                     ; 16764057                                    ; --            ; sistema_top ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING                       ; --            ; sistema_top ; Top            ;
+; PARTITION_NETLIST_TYPE              ; SOURCE                                      ; --            ; sistema_top ; Top            ;
+; PROJECT_OUTPUT_DIRECTORY            ; out                                         ; --            ; --          ; --             ;
+; SAVE_DISK_SPACE                     ; Off                                         ; On            ; --          ; --             ;
+; SEARCH_PATH                         ; ../../../iie-ctc                            ; --            ; --          ; --             ;
+; SEARCH_PATH                         ; ../../../t80/syn/altera/src                 ; --            ; --          ; --             ;
+; SOPC_BUILDER_SIGNATURE_ID           ; 005056C000080000012FBCD09855                ; --            ; --          ; --             ;
+; TOP_LEVEL_ENTITY                    ; sistema_top                                 ; lab_intup     ; --          ; --             ;
+; USE_GENERATED_PHYSICAL_CONSTRAINTS  ; Off                                         ; --            ; --          ; eda_blast_fpga ;
++-------------------------------------+---------------------------------------------+---------------+-------------+----------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                             ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis      ; 00:00:25     ; 1.0                     ; 4720 MB             ; 00:00:23                           ;
+; Fitter                    ; 00:00:16     ; 3.1                     ; 6163 MB             ; 00:00:22                           ;
+; Assembler                 ; 00:00:02     ; 1.0                     ; 4603 MB             ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:04     ; 1.0                     ; 4877 MB             ; 00:00:04                           ;
+; Database Export           ; 00:00:08     ; 1.0                     ; 4665 MB             ; 00:00:08                           ;
+; Total                     ; 00:00:55     ; --                      ; --                  ; 00:00:58                           ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+
+
++--------------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                            ;
++---------------------------+----------------------+-----------+------------+----------------+
+; Module Name               ; Machine Hostname     ; OS Name   ; OS Version ; Processor type ;
++---------------------------+----------------------+-----------+------------+----------------+
+; Analysis & Synthesis      ; Carlos-Lenovo-LEGION ; Windows 7 ; 6.2        ; x86_64         ;
+; Fitter                    ; Carlos-Lenovo-LEGION ; Windows 7 ; 6.2        ; x86_64         ;
+; Assembler                 ; Carlos-Lenovo-LEGION ; Windows 7 ; 6.2        ; x86_64         ;
+; TimeQuest Timing Analyzer ; Carlos-Lenovo-LEGION ; Windows 7 ; 6.2        ; x86_64         ;
+; Database Export           ; Carlos-Lenovo-LEGION ; Windows 7 ; 6.2        ; x86_64         ;
++---------------------------+----------------------+-----------+------------+----------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_map --read_settings_files=on --write_settings_files=off lab_intup -c lab_intup
+quartus_fit --read_settings_files=off --write_settings_files=off lab_intup -c lab_intup
+quartus_asm --read_settings_files=off --write_settings_files=off lab_intup -c lab_intup
+quartus_sta lab_intup -c lab_intup
+quartus_cdb lab_intup -c lab_intup --export_database=export_db
+
+
+

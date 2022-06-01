@@ -1,0 +1,21 @@
+Warning (275008): Primitive "GND" of instance "inst30" not used
+Warning (10541): VHDL Signal Declaration warning at bridged_jtag_uart.vhd(59): used implicit default value for signal "z80avalonmm_0_read_data_valid_jtag_uart_0_avalon_jtag_slave" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10542): VHDL Variable Declaration warning at altera_europa_support_lib.vhd(350): used initial value expression for variable "arg_copy" because variable was never assigned a value
+Warning (10542): VHDL Variable Declaration warning at altera_europa_support_lib.vhd(354): used initial value expression for variable "arg_length" because variable was never assigned a value
+Warning (10036): Verilog HDL or VHDL warning at z80avalonmm.vhd(43): object "s_control_register" assigned a value but never read
+Warning (10230): Verilog HDL assignment warning at button_debouncer.v(81): truncated value with size 32 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at button_debouncer.v(82): truncated value with size 32 to match size of target (21)
+Warning (10230): Verilog HDL assignment warning at button_debouncer.v(91): truncated value with size 32 to match size of target (21)
+Warning (10230): Verilog HDL assignment warning at button_debouncer.v(93): truncated value with size 32 to match size of target (21)
+Warning (10230): Verilog HDL assignment warning at button_debouncer.v(81): truncated value with size 32 to match size of target (10)
+Warning (10230): Verilog HDL assignment warning at button_debouncer.v(82): truncated value with size 32 to match size of target (21)
+Warning (10230): Verilog HDL assignment warning at button_debouncer.v(91): truncated value with size 32 to match size of target (21)
+Warning (10230): Verilog HDL assignment warning at button_debouncer.v(93): truncated value with size 32 to match size of target (21)
+Warning (10230): Verilog HDL assignment warning at button_debouncer.v(81): truncated value with size 32 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at button_debouncer.v(82): truncated value with size 32 to match size of target (21)
+Warning (10230): Verilog HDL assignment warning at button_debouncer.v(91): truncated value with size 32 to match size of target (21)
+Warning (10230): Verilog HDL assignment warning at button_debouncer.v(93): truncated value with size 32 to match size of target (21)
+Warning (10230): Verilog HDL assignment warning at button_debouncer.v(81): truncated value with size 32 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at button_debouncer.v(82): truncated value with size 32 to match size of target (21)
+Warning (10230): Verilog HDL assignment warning at button_debouncer.v(91): truncated value with size 32 to match size of target (21)
+Warning (10230): Verilog HDL assignment warning at button_debouncer.v(93): truncated value with size 32 to match size of target (21)

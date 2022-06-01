@@ -1,0 +1,8 @@
+set_global_assignment -name IP_TOOL_NAME "ALTPLL"
+set_global_assignment -name IP_TOOL_VERSION "9.1"
+set_global_assignment -name VHDL_FILE [file join $::quartus(qip_path) "mi_pll_divisor.vhd"]
+set_global_assignment -name MISC_FILE [file join $::quartus(qip_path) "mi_pll_divisor.bsf"]
+set_global_assignment -name MISC_FILE [file join $::quartus(qip_path) "mi_pll_divisor_inst.vhd"]
+set_global_assignment -name MISC_FILE [file join $::quartus(qip_path) "mi_pll_divisor.inc"]
+set_global_assignment -name MISC_FILE [file join $::quartus(qip_path) "mi_pll_divisor.cmp"]
+set_global_assignment -name MISC_FILE [file join $::quartus(qip_path) "mi_pll_divisor.ppf"]
