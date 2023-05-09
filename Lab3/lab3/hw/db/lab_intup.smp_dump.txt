@@ -59,6 +59,35 @@ state.q2 0 0 1 0 1
 state.q3 0 1 0 0 1 
 state.q4 1 0 0 0 1 
 
+State Machine - |sistema_top|sistema:inst|controlador_de_interrupciones:inst55|control_INTA_modo1:bloque_control_INTA_modo1|state_ack
+Name state_ack.esconder_INTA_srv state_ack.dar_INTA state_ack.esconder_INTA_pend state_ack.reposo 
+state_ack.reposo 0 0 0 0 
+state_ack.esconder_INTA_pend 0 0 1 1 
+state_ack.dar_INTA 0 1 0 1 
+state_ack.esconder_INTA_srv 1 0 0 1 
+
+State Machine - |sistema_top|sistema:inst|controlador_de_interrupciones:inst55|detector_RETI:bloque_detector_RETI|state_detRETI
+Name state_detRETI.Q_RETI state_detRETI.Q_ED state_detRETI.Q_aux2 state_detRETI.Q_aux1 state_detRETI.Q_reposo 
+state_detRETI.Q_reposo 0 0 0 0 0 
+state_detRETI.Q_aux1 0 0 0 1 1 
+state_detRETI.Q_aux2 0 0 1 0 1 
+state_detRETI.Q_ED 0 1 0 0 1 
+state_detRETI.Q_RETI 1 0 0 0 1 
+
+State Machine - |sistema_top|sistema:inst|controlador_de_interrupciones:inst55|detector_RETI:bloque_detector_RETI|state_finM1
+Name state_finM1.Q_finM1 state_finM1.Q_M1 state_finM1.Q0 
+state_finM1.Q0 0 0 0 
+state_finM1.Q_M1 0 1 1 
+state_finM1.Q_finM1 1 0 1 
+
+State Machine - |sistema_top|sistema:inst|controlador_de_interrupciones:inst55|control_CI:bloque_control|state
+Name state.en_servicio state.colocar_N state.pendiente state.pendiente_INTA state.inactivo 
+state.inactivo 0 0 0 0 0 
+state.pendiente_INTA 0 0 0 1 1 
+state.pendiente 0 0 1 0 1 
+state.colocar_N 0 1 0 0 1 
+state.en_servicio 1 0 0 0 1 
+
 State Machine - |sistema_top|sistema:inst|controlador_de_interrupciones:inst45|control_INTA_modo1:bloque_control_INTA_modo1|state_ack
 Name state_ack.esconder_INTA_srv state_ack.dar_INTA state_ack.esconder_INTA_pend state_ack.reposo 
 state_ack.reposo 0 0 0 0 

@@ -7,16 +7,21 @@ BTN equ 0x81
 LEDG equ 0x84
 ; Puertos agregados en Práctica 2:
 clearFF equ 0x87
-salidaDATA equ 0x86
-salidaCLK equ 0x85
-entradaDATA equ 0x86
-entradaCLK equ 0x85
+salidaDATA equ 0x85
+salidaCLK equ 0x86
+entradaDATA equ 0x85
+entradaCLK equ 0x86
 ; Puertos agregados en Práctica 3:
-CSTIMER equ 0x90
-CSCOUNTER equ 0xa0
+CSTIMER_CTE equ 0x90
+CSTIMER_CONTROL equ 0x91
+CSCOUNTER_CTE equ 0xa0
+CSCOUNTER_CONTROL equ 0xa1
 CSINT1_CLR equ 0xb1
 CSINT1_RDSTATE equ 0xb1
 CSINT1_VINT equ 0xb0
+CSINT2_CLR equ 0xc1
+CSINT2_RDSTATE equ 0xc1
+CSINT2_VINT equ 0xc0
 
 ; CTE16bit equ 19229d
 
@@ -54,14 +59,16 @@ tab_scodeadigito:
 .org 0x200
 tabla_int:
 	dw rutint_counter
-	
+	dw rutint_leds
+	dw rutint_timer
+	dw ps2clk_isr
 
 .data
 
-; reloj:
-	; db 0d
-	; db 0d
-	; db 0d
+reloj:
+	db 0d
+	db 0d
+	db 0d
 
 datos_ps2:
 	db 0d
@@ -69,6 +76,24 @@ datos_ps2:
 	db 0d
 	
 int_count:
+	db 0d
+	
+int_cpl:
+	db 0d
+	
+pausa:
+	db 0d
+	
+num_bit:
+	db 0d
+	
+rx_byte:
+	db 0d
+
+rx_done:
+	db 0d
+	
+llego_f0:
 	db 0d
 
 .text
@@ -131,72 +156,72 @@ binapbcd:
 	pop bc
 	ret
 
-; despreloj:
-	; push af
-	; push bc
-	; push de
-	; ld a, (ix)				; cargamos los segundos al acumulador
-	; call binapbcd
-	; call pbcda7seg			; en bc tenemos los segundos codificados a 7seg
-	; ld a, b			
-	; out (HEX3), a	
-	; ld a, c
-	; ld e, a					; preservamos lo que va en HEX2
-	; out (HEX2), a			; por si hay que agregarle punto decimal
-	inc ix
-	; ld a, (ix+1)				; cargamos las centesimas al acumulador
-	; call binapbcd
-	; call pbcda7seg			; en bc tenemos las centesimas codificadas a 7seg
-	; ld a, b
-	; out (HEX1), a
-	; ld a, c
-	; out (HEX0), a
-	inc ix			
-	; ld a, (ix+2)		
-	; cp 0d					; evalua como cero solo si la flag es 0x00
-	; jp nz, fin_despreloj	; si no vale 0x00, vale 0xFF y no se debe agregar punto decimal
-	; ld a, e					; recuperamos lo que va en HEX2
-	; and 01111111B			; mascara para prender el punto decimal
-	; out (HEX2), a
-	; fin_despreloj: 
-	dec ix					; restauramos el registro ix
-	dec ix
-	; pop de
-	; pop bc
-	; pop af
-	; ret
+despreloj:
+	push af
+	push bc
+	push de
+	ld a, (ix)				; cargamos los segundos al acumulador
+	call binapbcd
+	call pbcda7seg			; en bc tenemos los segundos codificados a 7seg
+	ld a, b			
+	out (HEX3), a	
+	ld a, c
+	ld e, a					; preservamos lo que va en HEX2
+	out (HEX2), a			; por si hay que agregarle punto decimal
+	; inc ix
+	ld a, (ix+1)				; cargamos las centesimas al acumulador
+	call binapbcd
+	call pbcda7seg			; en bc tenemos las centesimas codificadas a 7seg
+	ld a, b
+	out (HEX1), a
+	ld a, c
+	out (HEX0), a
+	; inc ix			
+	ld a, (ix+2)		
+	cp 0d					; evalua como cero solo si la flag es 0x00
+	jp nz, fin_despreloj	; si no vale 0x00, vale 0xFF y no se debe agregar punto decimal
+	ld a, e					; recuperamos lo que va en HEX2
+	and 01111111B			; mascara para prender el punto decimal
+	out (HEX2), a
+	fin_despreloj: 
+	; dec ix					; restauramos el registro ix
+	; dec ix
+	pop de
+	pop bc
+	pop af
+	ret
 	
-; decreloj:
-	; push af
-	; push bc
-	; ld b,(ix) ; cargar los segundos
-	; ld a,(ix+1)	; cargar las centesimas
-	; cp 10d		
-	; jp m, cent_neg	; centesimas-10 >= 0? (underflow centesimas)
-	; sub 10d			; si no hay underflow, restamos 10
-	; ld (ix+1), a
-	; jp fin_decreloj	; y saltamos al final
-	; cent_neg: 		; si hay underflow en las centesimas:
-		; ld c,(ix+1)	
-		; ld a,b
-		; cp 1d		
-		; jp m , seg_neg	; segundos-1 >= 0? (underflow segundos)
-		; sub 1d			; si no hay, restamos 1
-		; ld (ix), a
-		; ld a, c
-		; add a, 90d		; las centesimas valen 90+resto previo
-		; ld (ix+1), a
-		; ld a, (ix+2)
-		; cpl				; complementar la bandera
-		; ld (ix+2), a
-		; jp fin_decreloj
-	; seg_neg:			; si hay underflow en los segundos:
-		; ld (ix), 0d		; satura a cero el contador
-		; ld (ix+1), 0d
-	; fin_decreloj:
-	; pop bc
-	; pop af
-	; ret
+decreloj:
+	push af
+	push bc
+	ld b,(ix) ; cargar los segundos
+	ld a,(ix+1)	; cargar las centesimas
+	cp 10d		
+	jp m, cent_neg	; centesimas-10 >= 0? (underflow centesimas)
+	sub 10d			; si no hay underflow, restamos 10
+	ld (ix+1), a
+	jp fin_decreloj	; y saltamos al final
+	cent_neg: 		; si hay underflow en las centesimas:
+		ld c,(ix+1)	
+		ld a,b
+		cp 1d		
+		jp m , seg_neg	; segundos-1 >= 0? (underflow segundos)
+		sub 1d			; si no hay, restamos 1
+		ld (ix), a
+		ld a, c
+		add a, 90d		; las centesimas valen 90+resto previo
+		ld (ix+1), a
+		ld a, (ix+2)
+		cpl				; complementar la bandera
+		ld (ix+2), a
+		jp fin_decreloj
+	seg_neg:			; si hay underflow en los segundos:
+		ld (ix), 0d		; satura a cero el contador
+		ld (ix+1), 0d
+	fin_decreloj:
+	pop bc
+	pop af
+	ret
 
 ; espera un flanco de bajada de la señal PSCLK y retorna
 esperoflanco: 				
@@ -273,6 +298,7 @@ scodeadigito:
 		ret
 
 rutint_counter:
+	ei
 	push af
 	push bc
 	ld a, (int_count)
@@ -284,8 +310,130 @@ rutint_counter:
 	ld a, b
 	out (HEX1), a
 	pop bc
-	pop af
-	ei 
+	pop af 
 	reti
 		
+rutint_leds:
+	ei
+	push af
+	ld a, (int_cpl)
+	cpl
+	ld (int_cpl), a
+	out (HEX3), a
+	pop af
+	reti
+	
+rutint_timer:
+	ei
+	push af
+	push ix
+	ld a, (pausa)
+	cp 0xff
+	jr z, fin_rutint_timer
+	ld ix, reloj
+	call decreloj
+	call despreloj
+	fin_rutint_timer:
+	pop ix
+	pop af
+	reti
+	
+get_ps2_nb:
+    push bc ; preserva registros
+    ld a,(rx_done) ; rx_done tiene en 0 los bits correspondientes
+    cpl			   ; a los que no se han leido y 1 los que si de rx_byte
+    or 0
+    jr nz, not_yet
+	ready:
+		ld a,0
+		ld (rx_done),a	; cuando el dato esta completo se ponen todos los bit a cero
+		ld a, (rx_byte) ; y se carga en a el byte completo
+	not_yet:
+		pop bc	; restaura registros
+		ret
+    
+get_tecla_nb:
+	call get_ps2_nb
+	jr z, llego_dato
+	ret
+	llego_dato:
+		push bc
+		ld b, a
+		ld a, 0d
+		ld (rx_byte), a
+		ld a, b
+		cp 0xf0
+		jr nz, not_f0
+			ld a, 1d
+			ld (llego_f0), a
+			or 1d
+			pop bc
+			ret
+		not_f0:
+			ld a, (llego_f0)
+			cp 1d
+			jr nz, tecla_presionada
+				ld a, 0d
+				ld (llego_f0), a
+				ld a, b
+				cp a
+				pop bc
+				ret
+			tecla_presionada:
+				or 1d
+				pop bc
+				ret
+				
+ps2clk_isr:
+	ei
+	push af
+	push bc
+	ld a, (num_bit)
+	cp 0d
+	jr nz, num_bit_not_cero ; if num_bit == 0 llego bit de start
+		inc a
+		ld (num_bit), a
+		pop bc
+		pop af
+		reti
+	num_bit_not_cero:
+	cp 9d
+	jr nz, num_bit_not_nueve ; if num_bit == 9 llego bit de paridad
+		inc a
+		ld (num_bit), a
+		pop bc
+		pop af
+		reti
+	num_bit_not_nueve:
+	cp 10d 
+	jr nz, num_bit_not_diez ; if num_bit == 10 llego bit de stop
+		ld a, 0d
+		ld (num_bit), a
+		pop bc
+		pop af
+		reti
+	num_bit_not_diez: ; else, el dato entrante es un bit de dato
+		inc a
+		ld (num_bit), a ; num_bit += 1
+		; recibir y enmascarar dato serie:
+		in a, (entradaDATA) 
+		and 0x01
+		ld b, a
+		; rotamos los datos ya recibidos a la derecha:
+		; (se pone el ultimo dato recibido en el LSB)
+		ld a, (rx_byte)
+		or b
+		rrc a
+		; el resultado se guarda a memoria:
+		ld (rx_byte), a
+		; se agrega un 1 a rx_done desde la derecha:
+		ld a, (rx_done)
+		rlc a
+		or 1d
+		ld (rx_done), a
+		; restaurar registros y retornar:
+		pop bc
+		pop af
+		reti
+
 .end

@@ -1,5 +1,5 @@
 Database Export report for lab_intup
-Wed Jun 01 16:04:32 2022
+Mon Jun 06 11:44:39 2022
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -34,7 +34,7 @@ applicable agreement for further details.
 +----------------------------------------------------------------+
 ; Database Export Summary                                        ;
 +------------------------+---------------------------------------+
-; Database Export Status ; Successful - Wed Jun 01 16:04:32 2022 ;
+; Database Export Status ; Successful - Mon Jun 06 11:44:39 2022 ;
 ; Revision Name          ; lab_intup                             ;
 ; Top-level Entity Name  ; sistema_top                           ;
 ; Family                 ; Cyclone III                           ;
@@ -48,15 +48,15 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Database Export
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Wed Jun 01 16:04:24 2022
-Info: Command: quartus_cdb lab_intup -c lab_intup --export_database=export_db
+    Info: Processing started: Mon Jun 06 11:44:31 2022
+Info: Command: quartus_cdb lab_intup -c lab_intup --export_database=C:/Users/carlos/Downloads/IMP/IMP_laboratorio/Lab3/lab3/hw/export_db
 Info (39038): Successfully exported the post-synthesis black-box database
 Info (39038): Successfully exported the post-synthesis database
 Info (39038): Successfully exported the post-fitter database
 Info: Quartus II 64-Bit Database Export was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4665 megabytes
-    Info: Processing ended: Wed Jun 01 16:04:32 2022
-    Info: Elapsed time: 00:00:08
+    Info: Peak virtual memory: 4680 megabytes
+    Info: Processing ended: Mon Jun 06 11:44:41 2022
+    Info: Elapsed time: 00:00:10
     Info: Total CPU time (on all processors): 00:00:08
 
 

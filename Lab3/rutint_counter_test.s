@@ -5,7 +5,8 @@ ld sp, 0x0000
 ; seleccionar interrupciones modo 2
 im 2
 ; inicializar tabla de interrupciones
-ld a, 0x200/256d
+ld hl, tabla_int
+ld a, h
 ld i, a
 ; se inicializan en nivel alto los puertos salidaCLK y salidaDATA:
 ld a, 1d
@@ -19,7 +20,7 @@ ld a, c
 out (HEX0), a
 ld a, b
 out (HEX1), a
-; inicializar controlador de interrupciones
+; inicializar controlador de interrupciones 1 
 ld a, 0d
 out (CSINT1_VINT), a
 out (CSINT1_CLR), a
